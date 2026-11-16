@@ -102,7 +102,7 @@ After extracting the hash, John the Ripper was used to perform a dictionary atta
 The extracted hash file was supplied to John along with the selected wordlist.
 
 ```bash
-john --wordlist=WORDLIST_PATH hash.txt
+john --wordlist=WORDLIST_PATH hash1.txt
 ```
 
 **Command explanation:**
@@ -110,12 +110,12 @@ john --wordlist=WORDLIST_PATH hash.txt
 - `john`: Starts John the Ripper.
 - `--wordlist`: Specifies the wordlist used for the attack.
 - `WORDLIST_PATH`: The path to the selected wordlist.
-- `hash.txt`: The file containing the extracted PDF hash.
+- `hash1.txt`: The file containing the extracted PDF hash.
 
 After the attack completed, the recovered password could be displayed using:
 
 ```bash
-john --show hash.txt
+john --show hash1.txt
 ```
 
 **Screenshot – John the Ripper Execution:**
@@ -151,12 +151,8 @@ The same extraction and cracking methodology was applied independently to every 
 The first PDF file was processed using `pdf2john` to extract its password hash.
 
 ```bash
-pdf2john "FILE_1.pdf" > hash1.txt
+pdf2john "My Locked PDF1.pdf" > hash1.txt
 ```
-
-(Screenshot: Add the terminal output showing the hash extracted from the first PDF.)
-
-![File 1 Hash](assets/file1-hash.png)
 
 **Step 2: Password Cracking**
 
@@ -166,9 +162,9 @@ The extracted hash was loaded into John the Ripper, and a dictionary attack was 
 john --wordlist=WORDLIST_PATH hash1.txt
 ```
 
-(Screenshot: Add the John the Ripper output showing the recovered password for File 1.)
 
-![File 1 Cracking](assets/file1-cracking.png)
+
+![File 1 Cracking](file1-cracking.png)
 
 **Step 3: Password Verification & Flag Extraction**
 
@@ -181,9 +177,9 @@ The recovered password was used to unlock the PDF and access its contents.
 | Extracted Flag | (Add the complete flag) |
 | Verification | (Successfully opened / Other result) |
 
-(Screenshot: Add an image showing the flag inside the unlocked PDF.)
 
-![File 1 Flag](assets/file1-flag.png)
+
+![File 1 Flag](file1-flag.png)
 
 ---
 
@@ -192,12 +188,10 @@ The recovered password was used to unlock the PDF and access its contents.
 **Step 1: Hash Extraction**
 
 ```bash
-pdf2john "FILE_2.pdf" > hash2.txt
+pdf2john "My\ Locked\ PDF2.pdf" > hash2.txt
 ```
 
-(Screenshot: Add the extracted hash for File 2.)
 
-![File 2 Hash](assets/file2-hash.png)
 
 **Step 2: Password Cracking**
 
@@ -205,9 +199,9 @@ pdf2john "FILE_2.pdf" > hash2.txt
 john --wordlist=WORDLIST_PATH hash2.txt
 ```
 
-(Screenshot: Add John the Ripper's output showing the recovered password.)
 
-![File 2 Cracking](assets/file2-cracking.png)
+
+![File 2 Cracking](file2-cracking.png)
 
 **Step 3: Password Verification & Flag Extraction**
 
@@ -220,9 +214,9 @@ The recovered password was used to open the second PDF and retrieve its flag.
 | Extracted Flag | (Add the complete flag) |
 | Verification | (Successfully opened / Other result) |
 
-(Screenshot: Add the second PDF displaying its extracted flag.)
 
-![File 2 Flag](assets/file2-flag.png)
+
+![File 2 Flag](file2-flag.png)
 
 ---
 
@@ -231,12 +225,12 @@ The recovered password was used to open the second PDF and retrieve its flag.
 **Step 1: Hash Extraction**
 
 ```bash
-pdf2john "FILE_3.pdf" > hash3.txt
+pdf2john "My\ Locked\ PDF2.pdf" > hash3.txt
 ```
 
-(Screenshot: Add the extracted hash for File 3.)
 
-![File 3 Hash](assets/file3-hash.png)
+
+
 
 **Step 2: Password Cracking**
 
@@ -244,9 +238,9 @@ pdf2john "FILE_3.pdf" > hash3.txt
 john --wordlist=WORDLIST_PATH hash3.txt
 ```
 
-(Screenshot: Add John the Ripper's output showing the recovered password.)
 
-![File 3 Cracking](assets/file3-cracking.png)
+
+![File 3 Cracking](file3-cracking.png)
 
 **Step 3: Password Verification & Flag Extraction**
 
