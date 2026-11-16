@@ -89,7 +89,7 @@ pdf2john "filename.pdf" > hash.txt
 - `>`: Redirects the extracted output into a text file.
 - `hash.txt`: Stores the extracted hash for the next step.
 
-**Screenshot – Hash Extraction:**
+
 
 
 
@@ -116,7 +116,7 @@ After the attack completed, the recovered password could be displayed using:
 john --show hash1.txt
 ```
 
-**Screenshot – John the Ripper Execution:**
+
 
 
 ### 5.3 Password Verification & Flag Extraction
@@ -125,7 +125,7 @@ Once John the Ripper recovered the password, it was used to open the correspondi
 
 The document was then inspected to locate and extract its flag.
 
-**Screenshot – Successful PDF Unlocking:**
+
 
 
 ---
