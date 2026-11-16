@@ -55,22 +55,24 @@ The same general methodology was applied to each of the four PDF files.
 
 ```mermaid
 flowchart TD
-    A["Start: Protected PDF Files"] --> B["Select PDF File"]
-    B --> C["Extract Password Hash"]
-    C --> D["Save Hash to a File"]
-    D --> E["Load Hash into John the Ripper"]
-    E --> F["Execute Dictionary Attack"]
-    F --> G{"Password Recovered?"}
-    G -- "No" --> H["Try Another Wordlist or Method"]
-    H --> F
-    G -- "Yes" --> I["Recover Password"]
-    I --> J["Open Protected PDF"]
-    J --> K["Extract Flag"]
-    K --> L["Record Password and Flag"]
-    L --> M{"More Files?"}
-    M -- "Yes" --> B
-    M -- "No" --> N["Complete"]
+    flowchart TD
+    A[Select PDF File] --> B[Extract Hash using pdf2john]
+    B --> C[Save Hash in TXT File]
+    C --> D[Load Hash into John the Ripper]
+    D --> E[Dictionary Attack]
+    E --> F[Recover Password]
+    F --> G[Unlock PDF]
+    G --> H[Extract Flag]
+    H --> I[Document Results]
 ```
+
+
+
+
+
+
+
+
 
 ### 5.1 Hash Extraction
 
