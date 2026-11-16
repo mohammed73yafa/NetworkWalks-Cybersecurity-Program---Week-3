@@ -308,5 +308,5 @@ It also reinforced the importance of using strong, unique passwords and understa
 
 **Author:** Mohammed Sami  
 **Program:** NetworkWalks Cybersecurity Program  
-**Batch:** B082  
+**Batch:** B084
 **Module:** Week 3 — Password Cracking & Hashing Fundamentals
