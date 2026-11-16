@@ -5,7 +5,7 @@
 
 ## 1. Introduction
 
-This report documents the practical implementation of password cracking techniques as part of Week 3 of the NetworkWalks Cybersecurity Program (Batch B082).
+This report documents the practical implementation of password cracking techniques as part of Week 3 of the NetworkWalks Cybersecurity Program (Batch B084).
 
 The main objective of this lab was to recover passwords from four password-protected PDF files, extract their corresponding flags, and understand how dictionary-based password attacks work in practice.
 
