@@ -255,7 +255,7 @@ The recovered password was used to unlock the third PDF and retrieve its flag.
 
 (Screenshot: Add the third PDF displaying its extracted flag.)
 
-![File 3 Flag](assets/file3-flag.png)
+![File 3 Flag](file3-flag.png)
 
 ---
 
@@ -264,12 +264,9 @@ The recovered password was used to unlock the third PDF and retrieve its flag.
 **Step 1: Hash Extraction**
 
 ```bash
-pdf2john "FILE_4.pdf" > hash4.txt
+pdf2john "My\ Locked\ PDF1\ \(for\ NW\ Tools\ Lab\ WK3-PM2\).pdf" > hash4.txt
 ```
 
-(Screenshot: Add the extracted hash for File 4.)
-
-![File 4 Hash](assets/file4-hash.png)
 
 **Step 2: Password Cracking**
 
@@ -277,9 +274,9 @@ pdf2john "FILE_4.pdf" > hash4.txt
 john --wordlist=WORDLIST_PATH hash4.txt
 ```
 
-(Screenshot: Add John the Ripper's output showing the recovered password.)
 
-![File 4 Cracking](assets/file4-cracking.png)
+
+![File 4 Cracking](file4-cracking.png)
 
 **Step 3: Password Verification & Flag Extraction**
 
@@ -292,9 +289,9 @@ The recovered password was used to unlock the fourth PDF and retrieve its flag.
 | Extracted Flag | (Add the complete flag) |
 | Verification | (Successfully opened / Other result) |
 
-(Screenshot: Add the fourth PDF displaying its extracted flag.)
 
-![File 4 Flag](assets/file4-flag.png)
+
+![File 4 Flag](file4-flag.png)
 
 ---
 
@@ -304,10 +301,10 @@ The following table provides a consolidated overview of the results obtained fro
 
 | # | PDF File | Recovered Password | Extracted Flag | Status |
 |---|---|---|---|---|
-| 1 | (File 1) | (Password 1) | (Flag 1) | (Success) |
-| 2 | (File 2) | (Password 2) | (Flag 2) | (Success) |
-| 3 | (File 3) | (Password 3) | (Flag 3) | (Success) |
-| 4 | (File 4) | (Password 4) | (Flag 4) | (Success) |
+| 1 | (My Locked PDF1.pdf) | (good-luck) | (nw{cybersecurity_flag_captured_2608}) | (Success) |
+| 2 | (My Locked PDF2.pdf) | (Password1) | ( nw{networkwalks_persistence_jtr_270521}) | (Success) |
+| 3 | (My Locked PDF3.pdf) | (1qaz2wsx) | ( nw{networkwalks_flag_260821_1}) | (Success) |
+| 4 | (My Locked PDF1 (for NW Tools Lab WK3-PM2).pdf) | (Password1) | ( nw{networkwalks_flag1_jtr_270521_1}) | (Success) |
 
 **Total Target Files:** 4
 
