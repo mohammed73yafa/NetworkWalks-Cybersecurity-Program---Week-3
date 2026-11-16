@@ -54,7 +54,6 @@ The same general methodology was applied to each of the four PDF files.
 ### Workflow Diagram
 
 ```mermaid
-flowchart TD
     flowchart TD
     A[Select PDF File] --> B[Extract Hash using pdf2john]
     B --> C[Save Hash in TXT File]
