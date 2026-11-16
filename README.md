@@ -26,12 +26,12 @@ The following environment and tools were used during the practical exercises.
 
 | Component | Details |
 |---|---|
-| Operating System | (Add the operating system used, e.g. Kali Linux or Windows) |
+| Operating System | Kali Linux  |
 | Hash Extraction Tool | pdf2john |
 | Password Cracking Tool | John the Ripper |
 | Attack Method | Dictionary Attack |
 | Target Files | 4 Password-Protected PDF Files |
-| Virtualization | (Add VMware / VirtualBox if applicable) |
+| Virtualization | VMware  |
 
 ## 4. Theoretical Background
 
@@ -91,9 +91,7 @@ pdf2john "filename.pdf" > hash.txt
 
 **Screenshot – Hash Extraction:**
 
-(Insert a screenshot showing the terminal command and the extracted hash for one of the PDF files here.)
 
-![Hash Extraction](assets/hash-extraction.png)
 
 ### 5.2 Password Cracking with John the Ripper
 
@@ -120,9 +118,6 @@ john --show hash1.txt
 
 **Screenshot – John the Ripper Execution:**
 
-(Insert a screenshot showing John the Ripper running the dictionary attack and identifying the password here.)
-
-![John the Ripper](assets/john-cracking.png)
 
 ### 5.3 Password Verification & Flag Extraction
 
@@ -132,9 +127,6 @@ The document was then inspected to locate and extract its flag.
 
 **Screenshot – Successful PDF Unlocking:**
 
-(Insert a screenshot showing the PDF successfully opened using the recovered password here.)
-
-![PDF Unlocked](assets/pdf-unlocked.png)
 
 ---
 
@@ -144,7 +136,7 @@ This section documents the practical execution for each of the four target PDF f
 
 The same extraction and cracking methodology was applied independently to every file.
 
-## 6.1 File 1 — (Add the First PDF Filename)
+## 6.1 File 1 — My Locked PDF1.pdf
 
 **Step 1: Hash Extraction**
 
@@ -170,12 +162,7 @@ john --wordlist=WORDLIST_PATH hash1.txt
 
 The recovered password was used to unlock the PDF and access its contents.
 
-| Information | Result |
-|---|---|
-| File Name | (Add File 1 name) |
-| Recovered Password | (Add the recovered password) |
-| Extracted Flag | (Add the complete flag) |
-| Verification | (Successfully opened / Other result) |
+
 
 
 
@@ -183,7 +170,7 @@ The recovered password was used to unlock the PDF and access its contents.
 
 ---
 
-## 6.2 File 2 — (Add the Second PDF Filename)
+## 6.2 File 2 — My Locked PDF2.pdf
 
 **Step 1: Hash Extraction**
 
@@ -207,12 +194,6 @@ john --wordlist=WORDLIST_PATH hash2.txt
 
 The recovered password was used to open the second PDF and retrieve its flag.
 
-| Information | Result |
-|---|---|
-| File Name | (Add File 2 name) |
-| Recovered Password | (Add the recovered password) |
-| Extracted Flag | (Add the complete flag) |
-| Verification | (Successfully opened / Other result) |
 
 
 
@@ -220,12 +201,12 @@ The recovered password was used to open the second PDF and retrieve its flag.
 
 ---
 
-## 6.3 File 3 — (Add the Third PDF Filename)
+## 6.3 File 3 — MY Locked PDF3.pdf
 
 **Step 1: Hash Extraction**
 
 ```bash
-pdf2john "My\ Locked\ PDF2.pdf" > hash3.txt
+pdf2john "My\ Locked\ PDF3.pdf" > hash3.txt
 ```
 
 
@@ -246,20 +227,12 @@ john --wordlist=WORDLIST_PATH hash3.txt
 
 The recovered password was used to unlock the third PDF and retrieve its flag.
 
-| Information | Result |
-|---|---|
-| File Name | (Add File 3 name) |
-| Recovered Password | (Add the recovered password) |
-| Extracted Flag | (Add the complete flag) |
-| Verification | (Successfully opened / Other result) |
-
-(Screenshot: Add the third PDF displaying its extracted flag.)
 
 ![File 3 Flag](file3-flag.png)
 
 ---
 
-## 6.4 File 4 — (Add the Fourth PDF Filename)
+## 6.4 File 4 — "My Locked PDF1 (for NW Tools Lab WK3-PM2).pdf
 
 **Step 1: Hash Extraction**
 
@@ -282,12 +255,6 @@ john --wordlist=WORDLIST_PATH hash4.txt
 
 The recovered password was used to unlock the fourth PDF and retrieve its flag.
 
-| Information | Result |
-|---|---|
-| File Name | (Add File 4 name) |
-| Recovered Password | (Add the recovered password) |
-| Extracted Flag | (Add the complete flag) |
-| Verification | (Successfully opened / Other result) |
 
 
 
@@ -308,9 +275,9 @@ The following table provides a consolidated overview of the results obtained fro
 
 **Total Target Files:** 4
 
-**Successfully Recovered Passwords:** (Add the number)
+**Successfully Recovered Passwords:** 4
 
-**Successfully Extracted Flags:** (Add the number)
+**Successfully Extracted Flags:** 4
 
 ---
 
