@@ -67,13 +67,6 @@ flowchart TD
 ```
 
 
-
-
-
-
-
-
-
 ### 5.1 Hash Extraction
 
 Before starting the cracking process, the password hash was extracted from each protected PDF file using `pdf2john`.
@@ -102,14 +95,14 @@ After extracting the hash, John the Ripper was used to perform a dictionary atta
 The extracted hash file was supplied to John along with the selected wordlist.
 
 ```bash
-john --wordlist=WORDLIST_PATH hash1.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt hash1.txt
 ```
 
 **Command explanation:**
 
 - `john`: Starts John the Ripper.
 - `--wordlist`: Specifies the wordlist used for the attack.
-- `WORDLIST_PATH`: The path to the selected wordlist.
+- `/usr/share/wordlists/rockyou.txt`: The path to the selected wordlist.
 - `hash1.txt`: The file containing the extracted PDF hash.
 
 After the attack completed, the recovered password could be displayed using:
@@ -153,7 +146,7 @@ pdf2john "My Locked PDF1.pdf" > hash1.txt
 The extracted hash was loaded into John the Ripper, and a dictionary attack was executed.
 
 ```bash
-john --wordlist=WORDLIST_PATH hash1.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt hash1.txt
 ```
 
 
@@ -185,7 +178,7 @@ pdf2john "My\ Locked\ PDF2.pdf" > hash2.txt
 **Step 2: Password Cracking**
 
 ```bash
-john --wordlist=WORDLIST_PATH hash2.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt hash2.txt
 ```
 
 
@@ -218,7 +211,7 @@ pdf2john "My\ Locked\ PDF3.pdf" > hash3.txt
 **Step 2: Password Cracking**
 
 ```bash
-john --wordlist=WORDLIST_PATH hash3.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt hash3.txt
 ```
 
 
@@ -246,7 +239,7 @@ pdf2john "My\ Locked\ PDF1\ \(for\ NW\ Tools\ Lab\ WK3-PM2\).pdf" > hash4.txt
 **Step 2: Password Cracking**
 
 ```bash
-john --wordlist=WORDLIST_PATH hash4.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt hash4.txt
 ```
 
 
